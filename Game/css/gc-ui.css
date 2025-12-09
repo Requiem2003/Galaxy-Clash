@@ -1,0 +1,67 @@
+/* File: Game/css/gc-ui.css */
+:root{
+  --gcui-bg: #0b1020;
+  --gcui-panel: rgba(20,25,40,.85);
+  --gcui-fg: #e8f1ff;
+  --gcui-fg-dim: #9fb3c8;
+  --gcui-accent: #79c0ff;
+  --gcui-good: #33d17a;
+  --gcui-warn: #ffce3e;
+  --gcui-bad: #ff6b6b;
+  --gcui-kill: #ff7979;
+  --gcui-heal: #2bd4a3;
+  --gcui-shield: #8bbcff;
+  --gcui-hit: #e6f0ff;
+  --gcui-miss: #9fb3c8;
+  --gcui-z: 9998;
+  --radius: 14px;
+}
+
+.gcui-root{ position:fixed; inset:auto 0 0 0; pointer-events:none; z-index:var(--gcui-z); font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--gcui-fg); }
+.gcui-root * { box-sizing: border-box; }
+
+/* HUD */
+.gcui-hud{ position:fixed; top:0; left:0; right:0; display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:10px; pointer-events:none; }
+.gcui-hud .team{ background:var(--gcui-panel); border:1px solid rgba(255,255,255,.06); backdrop-filter: blur(6px); border-radius: var(--radius); padding:10px 12px; }
+.team-meta{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; font-weight:600; letter-spacing:.2px; }
+.team-name{ color:var(--gcui-fg); }
+.team-seed{ color:var(--gcui-fg-dim); font-weight:400; font-size:12px; }
+.bars{ display:grid; gap:6px; }
+.bar{ position:relative; background:rgba(255,255,255,.06); border-radius:10px; height:18px; overflow:hidden; }
+.bar .label{ position:absolute; left:8px; top:0; bottom:0; display:flex; align-items:center; font-size:11px; color:var(--gcui-fg-dim); }
+.bar .fill{ height:100%; width:0%; transition: width .3s ease; }
+.bar.hp .fill{ background: linear-gradient(90deg, var(--gcui-good), #46e6c2); }
+.bar.morale .fill{ background: linear-gradient(90deg, var(--gcui-accent), #a1c9ff); }
+.bar .val{ position:absolute; right:8px; top:0; bottom:0; display:flex; align-items:center; font-size:12px; color:var(--gcui-fg); text-shadow: 0 1px 0 rgba(0,0,0,.25); }
+
+/* Log */
+.gcui-log{ position:fixed; top:72px; right:10px; width:min(420px, 38vw); height: calc(100vh - 130px); background:var(--gcui-panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); backdrop-filter: blur(6px); display:flex; flex-direction:column; pointer-events:auto; }
+.gcui-log header{ display:flex; align-items:center; justify-content:space-between; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.06); }
+.gcui-log .title{ font-weight:600; }
+.gcui-log .actions{ display:flex; gap:6px; align-items:center; }
+.gcui-log .actions .chk{ font-size:12px; color:var(--gcui-fg-dim); display:flex; align-items:center; gap:6px; }
+.gcui-log .actions button{ background:var(--gcui-accent); border:0; border-radius:8px; padding:6px 8px; color:#00111f; cursor:pointer; }
+.gcui-log .list{ flex:1; overflow:auto; padding:8px; display:grid; gap:6px; }
+.gcui-log .item{ padding:6px 8px; border-radius:8px; background: rgba(255,255,255,.04); color:var(--gcui-fg); }
+.gcui-log .item.turn{ color:#d7efff; }
+.gcui-log .item.hit{ border-left:3px solid var(--gcui-hit); }
+.gcui-log .item.heal{ border-left:3px solid var(--gcui-heal); }
+.gcui-log .item.shield{ border-left:3px solid var(--gcui-shield); }
+.gcui-log .item.kill{ border-left:3px solid var(--gcui-kill); }
+.gcui-log .item.miss{ color: var(--gcui-miss); opacity:.9; }
+.gcui-log .item.sys{ color: var(--gcui-fg-dim); }
+
+/* Controls */
+.gcui-controls{ position:fixed; left:10px; bottom:10px; display:flex; gap:8px; pointer-events:auto; }
+.gcui-controls button{ background:var(--gcui-accent); color:#00111f; border:0; padding:10px 12px; border-radius: 10px; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.25); }
+.gcui-controls .speed{ display:flex; gap:6px; align-items:center; padding:8px 10px; background:var(--gcui-panel); border:1px solid rgba(255,255,255,.06); border-radius: 10px; }
+.gcui-controls input[type=range]{ width:160px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .gcui-log{ width:auto; left:10px; right:10px; height:40vh; top:auto; bottom:66px; }
+  .gcui-hud{ grid-template-columns: 1fr; }
+}
+
+/* Reduced motion */
+.gc-reduce-motion .bar .fill{ transition: none; }

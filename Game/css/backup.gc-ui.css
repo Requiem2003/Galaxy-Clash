@@ -1,0 +1,61 @@
+/* === GC UI (Portrait crop + UI overrides) === */
+
+/* GC Portrait Top-Crop Override */
+.card img,
+#roster .card img,
+#hoverTip img,
+#gcPortraitEditor img,
+.tooltip img,
+div[class*="hover"] img {
+  object-fit: cover !important;
+  object-position: top center !important;
+}
+
+/* If any portraits use background-image instead of <img> */
+.card .portrait,
+.hover .portrait,
+.tooltip .portrait {
+  background-size: cover !important;
+  background-position: top center !important;
+}
+
+/* --- Overrides --- */
+
+/* GC_UI_Overrides.css — make randomize buttons compact */
+#btnRandomizeTeam{
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  padding: 6px 10px !important;
+  white-space: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  z-index: 60 !important;
+}
+
+.btnPerPlayerRandomize{
+  position: absolute !important;
+  top: 6px !important;
+  right: 6px !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  line-height: 1 !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  z-index: 61 !important;
+}
+
+/* Make sure generic button styles don't force 100% width */
+.container > aside.panel .controls button,
+.controls button{
+  width: auto !important;
+  flex: 0 0 auto !important;
+}

@@ -1,0 +1,103 @@
+Expanded Alternate Gamemode: "Galaxy War" (Player vs AI)
+Overview
+"Galaxy War" is a strategic and immersive campaign mode where players lead their chosen team across multiple Star Wars planets. With a starting budget of $40, players must manage resources, build a persistent roster, and make tactical decisions in a dynamic and evolving galaxy-wide conflict. Success depends on clever resource management, strategic use of reinforcements, and adapting to diverse planetary challenges.
+
+Core Features
+1. Persistent Battle Campaigns
+Battle Outcomes Influence Progress:
+
+Winning a battle provides significant advantages in subsequent missions, such as:
+Gaining fortified positions, reinforcements, or resource boosts.
+Capturing enemy leaders who provide unique abilities or intelligence for future missions.
+Losing a battle weakens your position:
+Retreat to less advantageous locations with fewer reinforcements.
+Risk losing captured planets and bonuses.
+Cumulative Damage System:
+
+Units that survive battles carry over injuries or depleted resources to the next.
+Players must choose whether to heal, repair, or replace damaged units.
+2. Resource Management
+Limited Resources:
+
+Earn credits and salvage after each battle to:
+Repair injured units or droids.
+Upgrade weapons and armor.
+Recruit new units or hire mercenaries (e.g., bounty hunters, pirates).
+Upgrade Paths:
+
+Example: Upgrade Jawas to specialize in scavenging more valuable resources or turn them into sabotage specialists.
+Enhance elite units like Darth Vader with custom perks (e.g., increased durability or new abilities like “Force Crush”).
+Unit Specialization:
+
+Invest resources to specialize units for specific tasks:
+Turn Stormtroopers into Mortar Troopers for area denial.
+Train Rebel Troopers in guerrilla tactics for ambushes.
+3. Territory Control
+Planetary Bonuses:
+
+Control iconic planets across the Star Wars galaxy, with each offering unique strategic benefits:
+Kashyyyk: Wookies gain extra health and melee damage; forests provide stealth bonuses.
+Tatooine: Jawas scavenge more resources, and battles feature dangerous neutral threats like Tusken Raiders.
+Hoth: Cold weather weakens units without environmental protection; Tauntauns provide mobility for Rebel units.
+Dynamic Galaxy Map:
+
+Battles occur across a connected galaxy map where players choose which territories to attack or defend.
+Losing a planet removes its bonus, forcing strategic prioritization.
+4. Special Objectives
+Dynamic Mission Types:
+
+Missions diversify gameplay beyond simple elimination:
+Capture the Flag: Retrieve a critical objective from the enemy team while defending your own.
+Escort Missions: Protect fragile units (e.g., R2-D2, C-3PO) as they move across hostile terrain.
+Wave Defense: Survive against escalating enemy reinforcements while holding a key position.
+Mission Scaling:
+
+Objectives scale in difficulty as the campaign progresses, introducing stronger AI enemies, environmental hazards, or multi-objective scenarios.
+5. Interactive Skill Mini-Games
+Droid Slicing:
+
+Units like Chopper, R2-D2, or IG-11 engage in hacking mini-games to disable enemy droids, open doors, or disrupt shields.
+Players participate in skill-check puzzles with increasing difficulty based on the importance of the task.
+Force Duels:
+
+When Force-sensitive characters clash, players engage in a turn-based mini-game:
+Select tactical moves (e.g., Force push, saber strike, block) to influence the outcome.
+Duels affect the morale of nearby units, with the winner inspiring allies or demoralizing enemies.
+Gameplay Flow
+Initial Setup:
+
+Players start with a $40 budget to draft their team.
+Choose a starting planet based on strategic value or terrain advantage.
+Strategic Galaxy Map:
+
+Players navigate a galaxy map with marked planets.
+Select battles based on risk/reward, balancing potential gains against enemy strength.
+Resource Management Phase:
+
+After each battle, players:
+Allocate credits to repair, upgrade, or recruit units.
+Decide whether to rest units or push forward with depleted resources.
+Manage captured bonuses (e.g., new units unlocked by controlling specific planets).
+Battle Phase:
+
+Engage in various mission types with unique objectives and hazards.
+Use planetary terrain and team synergies to maximize effectiveness.
+Evolving Challenges:
+
+Enemy AI strengthens with each battle, introducing tougher units and new tactics.
+Neutral factions (e.g., Tusken Raiders, Krykna spiders) may intervene unpredictably.
+Campaign Victory:
+
+Players win by capturing a majority of the galaxy or completing a climactic “final battle” mission against a powerful enemy force.
+Advanced Features
+Dynamic Enemy Commanders:
+AI-controlled enemy teams feature iconic leaders (e.g., Grand Admiral Thrawn, General Grievous) with distinct strategies:
+Thrawn: Prefers long-term planning, deploying reinforcements strategically.
+Grievous: Leads aggressive melee-based assaults with droids.
+Random Events:
+Periodic galactic events shake up the campaign:
+Smuggler’s Assistance: Gain bonus resources for bribing smugglers.
+Imperial Blockade: Restricts movement between planets until a blockade mission is completed.
+Replayability:
+Multiple starting points and randomized events make every campaign unique.
+Difficulty settings allow casual players to enjoy while challenging veterans with hardcore mode.

@@ -1,0 +1,148 @@
+/* === GC UI (Portrait crop + UI overrides) === */
+
+/* GC Portrait Top-Crop Override */
+.card img,
+#roster .card img,
+#hoverTip img,
+#gcPortraitEditor img,
+.tooltip img,
+div[class*="hover"] img {
+  object-fit: cover !important;
+  object-position: top center !important;
+}
+
+/* If any portraits use background-image instead of <img> */
+.card .portrait,
+.hover .portrait,
+.tooltip .portrait {
+  background-size: cover !important;
+  background-position: top center !important;
+}
+
+/* --- Overrides --- */
+
+/* GC_UI_Overrides.css — make randomize buttons compact */
+#btnRandomizeTeam{
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  padding: 6px 10px !important;
+  white-space: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  z-index: 60 !important;
+}
+
+.btnPerPlayerRandomize{
+  position: absolute !important;
+  top: 6px !important;
+  right: 6px !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  line-height: 1 !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  z-index: 61 !important;
+}
+
+/* Make sure generic button styles don't force 100% width */
+.container > aside.panel .controls button,
+.controls button{
+  width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+
+
+/* === FONTS & THEME === */
+@font-face {
+  font-family: 'Starjedi';
+  src: url('../assets/fonts/Starjedi.ttf') format('truetype');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Conthrax';
+  src: url('../assets/fonts/Conthrax-SemiBold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GC Character Names';
+  src: url('../assets/fonts/Character Names.ttf') format('truetype');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GC Character Descriptions';
+  src: url('../assets/fonts/Character Descriptions.ttf') format('truetype');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+
+:root {
+  --gc-yellow: #ffe81f; /* classic SW yellow */
+  --gc-black: #000000;
+  --gc-white: #ffffff;
+}
+
+body.gc-bg-starwars {
+  background: url('../assets/images/backgroundd.jpg') center/cover fixed no-repeat;
+}
+
+/* Title + logo helpers */
+.sw-title { font-family: 'Starjedi', system-ui, sans-serif; letter-spacing: 0.02em; color: var(--gc-yellow); text-shadow: 0 0 12px rgba(255,232,31,0.25); }
+.gc-subtitle { font-family: 'Conthrax', system-ui, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+.gc-name { font-family: 'GC Character Names', system-ui, sans-serif; }
+.gc-desc { font-family: 'GC Character Descriptions', system-ui, sans-serif; }
+
+/* Bullet image helper (for fancy lists) */
+ul.gc-bullets { list-style: none; padding-left: 1.6rem; }
+ul.gc-bullets li {
+  background: url('../assets/icons/bullet-point.png') 0 .25rem/1rem 1rem no-repeat;
+  padding-left: 1.6rem;
+  margin: .25rem 0;
+}
+
+
+/* === Top Bar / Brand Lockup === */
+.gc-topbar{
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .6rem .9rem;
+  background: rgba(0,0,0,.72);
+  border-bottom: 1px solid rgba(255, 232, 31, .25);
+  backdrop-filter: blur(6px);
+}
+.gc-brand{ display:flex; align-items:center; gap:.75rem; min-height:48px; }
+.gc-brand img.logo{ width:56px; height:56px; object-fit:contain; image-rendering:auto; }
+.gc-wordmark .sw-title{ margin:0; line-height:1; font-size:1.6rem; }
+.gc-wordmark .gc-subtitle{ margin:.15rem 0 0; font-size:.84rem; opacity:.9; letter-spacing:.06em; color:var(--gc-white); }
+@media (max-width: 520px){
+  .gc-brand img.logo{ width:44px; height:44px; }
+  .gc-wordmark .sw-title{ font-size:1.3rem; }
+  .gc-wordmark .gc-subtitle{ font-size:.78rem; }
+}
+
+
+/* === OVERRIDE: Character names use 'GC Character Names' (not Starjedi) === */
+:where(.gc-name,
+       .unit-name,
+       .character-name,
+       #roster .name,
+       .cards .card .name,
+       .hovercard .name,
+       .tooltip .name,
+       .picker .card-title,
+       .card .title.name){
+  font-family: 'GC Character Names', system-ui, sans-serif !important;
+  letter-spacing: .01em;
+}
